@@ -1,0 +1,341 @@
+/* Variables */
+
+:root {
+ --primarycolor: #93CB52;
+ --offblack: #1F1F1F;
+ --mainwhite: #FFFFFF;
+ --maintransiotion: 1s all linear;
+ --mainspacing: 1.5;
+}
+
+/* Global Styles */
+
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+body {
+ font-family: 'Roboto', sans-serif;
+ background: var(--mainwhite);
+ color: var(--offblack);
+ line-height: 1.5;
+}
+
+a {
+ text-decoration: none;
+}
+
+li {
+ list-style-type: none;
+}
+
+img {
+ width: 100%;
+ display: block;
+}
+
+h1, h2, h3 {
+ letter-spacing: var(--mainspacing);
+ text-transform: capitalize;
+}
+
+p {
+ font-weight: 300;
+ font-size: 1.1rem;
+ line-height: 2;
+}
+
+.text-center {
+ text-align: center;
+}
+
+.color-change {
+ color: var(--primarycolor);
+}
+
+/* ****************************************************** */
+
+.container-header {
+ background: var(--offblack);
+ color: var(--mainwhite);
+ text-align: center;
+ padding: 10px;
+ display: flex;
+ position: fixed;
+ flex-direction: column;
+ top: 0;
+ right: 0;
+ left: 0;
+ z-index: 6;
+}
+
+.container-header h1 i {
+ color: var(--primarycolor);
+}
+
+.nav ul li a {
+ color: var(--mainwhite);
+ transition: var(--maintransiotion);
+}
+
+.nav ul li {
+ padding: 8px;
+ border-radius: 5px;
+}
+
+.nav ul {
+ padding: 20px;
+ display: flex;
+ justify-content: space-evenly;
+}
+
+/* hover */
+
+.nav ul li:hover {
+ background: var(--primarycolor);
+}
+
+/* end Of navbar */
+
+/* Banner */
+
+.banner {
+ height: 100vh;
+ background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../image_resources/showcase.jpg)center/cover no-repeat fixed;
+ text-align: center;
+}
+
+.container-banner {
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ padding: 0 20px;
+}
+
+.container-banner h1 {
+ color: var(--mainwhite);
+ font-size: 4rem;
+ width: 20rem;
+ line-height: 4.6rem;
+}
+
+.container-banner p {
+ color: var(--mainwhite);
+ margin-bottom: 20px;
+}
+
+/* main-btn */
+
+.main-btn {
+ color: var(--mainwhite);
+ padding: 10px 30px;
+ background: var(--primarycolor);
+ border: 1px solid var(--offblack);
+ border-radius: 4px;
+ text-transform: capitalize;
+ transition: var(--maintransiotion);
+}
+
+.main-btn:hover {
+ background: #7AB436;
+}
+
+/* End Of Banner */
+
+/*media Query  */
+
+@media screen and (min-width:976px) {
+ .container-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+ }
+ .container-banner h1 {
+  color: var(--mainwhite);
+  font-size: 4rem;
+  min-width: 50rem;
+ }
+}
+
+/*media Query  */
+
+/* what we do */
+
+.services-container {
+ margin: auto;
+ padding: 1rem 2rem;
+}
+
+.items {
+ display: flex;
+ flex-direction: column;
+ padding: 1rem;
+}
+
+.service-card {
+ display: flex;
+ text-align: center;
+ margin: 20px 0;
+}
+
+.services-container h2 {
+ font-size: 2rem;
+ word-spacing: var(--mainspacing);
+}
+
+.service-card i {
+ font-size: 2rem;
+ background: var(--primarycolor);
+ padding: 17px;
+ border-radius: 50%;
+ margin-bottom: 1rem;
+ align-self: center;
+ margin-right: 20px;
+}
+
+@media screen and (min-width:996px) {
+ .services-container {
+  display: flex;
+  flex-direction: column;
+ }
+ .items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+ }
+ .service-card {
+  text-align: center;
+  margin: 0 20px;
+ }
+ .items .service-card p {
+  max-width: 20rem;
+ }
+}
+
+/*end Of  what we do */
+
+/* Who We are */
+
+.who {
+ display: flex;
+}
+
+.who div {
+ flex: 1;
+}
+
+.img-who {
+ background: url('../image_resources/people.jpg')center/cover no-repeat;
+}
+
+.who-data {
+ background: var(--offblack);
+ color: var(--mainwhite);
+ padding: 20px;
+}
+
+.who-data h2 {
+ font-size: 2rem;
+ margin-left: 10px;
+}
+
+.who-data h4 {
+ margin: 10px;
+}
+
+.who-data p {
+ margin: 10px;
+}
+
+.who-text {
+ margin: 10px;
+ border-bottom: 1px dotted #444;
+}
+
+@media screen and (max-width:600px) {
+ .img-who {
+  display: none;
+ }
+}
+
+/* End OF Who We are */
+
+/* clients */
+
+.clients h1 {
+ text-align: center;
+ font-size: 2rem;
+}
+
+.container-clients {
+ display: flex;
+ padding: 20px;
+ justify-content: center;
+
+}
+.container-clients .clients-logo img{
+ margin: auto;
+ width: 60%;
+ 
+}
+
+
+
+/* End Of clients */
+
+
+/*Contact  */
+.contact{
+ display: flex;
+}
+.contact-form{
+ background: var(--primarycolor);
+ color: var(--mainwhite);
+display: flex;
+flex-direction: column;
+padding: 20px;
+}
+.contact .contact-form, .contact .map{
+ flex: 1;
+}
+.form-group{
+ padding: 10px;
+}
+
+.form-group label {
+ display: block;
+}
+.form-group input ,textarea {
+ padding: 10px;
+ width: 100%;
+}
+.contact-btn{
+ background: var(--offblack);
+ color: var(--mainwhite);
+ padding: 5px 10px;
+ border-radius: 6px;
+}
+.contact-btn:hover{
+ background: var(--primarycolor);
+ color: var(--offblack);
+}
+/*End Of Contact  */
+
+/* Footer */
+.footer{
+ background: var(--offblack);
+ color: var(--mainwhite);
+ text-align: center;
+ padding: 20px;
+}
+
+
+/* End OF Footer */
+
+
